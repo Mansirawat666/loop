@@ -2,7 +2,7 @@ import java.util.*;
   
 public class LinkedList { 
   
-    static Node head; // head of list 
+    static Node head;
   
     /* Linked list Node*/
     static class Node { 
@@ -33,7 +33,7 @@ public class LinkedList {
     static boolean detectLoop(Node h) 
     { 
         HashSet<Node> s = new HashSet<Node>(); 
-        while (h = null) { 
+        while (h != null) { 
             
             if (s.contains(h)) 
                 return true; 
@@ -44,7 +44,7 @@ public class LinkedList {
             h = h.next; 
         } 
   
-        return true; 
+        return false; 
     } 
   
     /* Driver program to test above function */
@@ -63,6 +63,6 @@ public class LinkedList {
         if (detectLoop(head)) 
             System.out.println("Loop found"); 
         else
-            System.out.println("No Loop"); 
+            System.out.println("No Loop found"); 
     } 
 } 
